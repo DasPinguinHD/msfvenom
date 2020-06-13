@@ -1,36 +1,3 @@
-# Schnellstart - Ein nützliches Tool für Python3
-# Installation
+# MsfVenom
 
-
-
-
-
-## Anforderungen
-
-Python3, Internetverbindung, Root-Privilegien
-
-
-
-
-
-
-## Installation und Ausführen auf Ubuntu & Kali (Debian)
-
-`git clone https://github.com/DasPinguinHD/Schnellstart3`
-
-`cd Schnellstart3`
-
-`sudo python3 start.py
-`
-
-
-
-# Lizenz
-Dieses Projekt ist mit der MIT Lizenz lizensiert
-
-
-
-
-# Features
-
-Schnellstart3 beinhaltet Kürzel für Befehle wie airmon-ng, airodump, uvm. Außerdem enthält Schnellstart3 einen MsfVenom-Payload Generator
+MsfVenom is a tool that is designed for beginners, who want to use the msfvenom tool but dont really know how the command works. This tool lets you create a msfvenom payload easily. It supports the three different modes (Raw-Output, Template, Code-Injection).
