@@ -16,3 +16,7 @@ Follow these three simple commands to install the tool:
 
 # Bugs or suggestions
 Please make sure to report a bug in the issues section. You can also suggest things there.
+
+
+Tip:
+If you customize the badchars.txt file, you can edit your payload's bad chars.
