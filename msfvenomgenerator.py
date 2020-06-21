@@ -106,8 +106,8 @@ try:
     else:
         print("Iterations set")
     while True:
-        print("Now enter how many Bad-Chars you want: ")
-        print("1,2,3,4")
+        print("Now enter how many Bad-Chars you want, type 'edit' to edit the file and customize your badchars file: ")
+        print("1,2,3,4; edit")
         bchar = input(bcolors.UNDERLINE + bcolors.OKBLUE + "MSFVenom-Generator" + bcolors.ENDC + " >>> ")
         if bchar == "1":
             with open("badchars.txt", "r") as filestream:
@@ -133,6 +133,8 @@ try:
                     currentline = line.split(",")
                     badchar = "'" + str(currentline[0]) + str(currentline[1]) + str(currentline[2]) + str(currentline[3]) + "'"
             break
+        if bchar == "edit":
+            os.system("gedit badchars.txt")
 
     print(str(badchar))
 
