@@ -22,10 +22,14 @@ Follow these three simple commands to install the tool:
 ```chmod +x install.sh```
 
 ```sudo ./install.sh```
+
 At this point an alias is created. To run it
+
 ```Restart your terminal```
 ```sudo su```
+
 ```msfg```
+
 
 # Bugs or suggestions
 Please make sure to report a bug in the issues section. You can also suggest things there.
