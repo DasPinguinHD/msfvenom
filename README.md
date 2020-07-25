@@ -30,6 +30,7 @@ At this point an alias is created. To run it
 ```sudo su```
 
 ```msfg```
+
 Currently, the alias only exists while being root. I am working on it to become usable with sudo too
 
 
