@@ -17,8 +17,10 @@ Follow these three simple commands to install the tool:
 ### or you can run the installation script:
 ```git clone https://github.com/DasPinguinHD/msfvenom```
 
-```cd msfvenom```
+```cd msfvenom``` 
+
 ```chmod +x install.sh```
+
 ```sudo ./install.sh```
 
 # Bugs or suggestions
