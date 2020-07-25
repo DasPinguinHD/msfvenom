@@ -26,6 +26,7 @@ Follow these three simple commands to install the tool:
 At this point an alias is created. To run it
 
 ```Restart your terminal```
+
 ```sudo su```
 
 ```msfg```
